@@ -77,3 +77,123 @@
     }
   ]
 }
+
+
+
+/*{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Customers/GetAll",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Customers",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customers/GetCustomerById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Customers/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+      ,
+      //"FileCacheOptions": {
+      //  "TtlSeconds": 10
+      //}
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //},
+
+      //"RouteClaimsRequirement": {
+      //  "Role": "Customer"
+      //}
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 5,
+        "Limit": 1
+      }
+
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customers/create",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Customers/create",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Customers/edit/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Customers/edit/{id}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    //{
+    //  "DownstreamPathTemplate": "/api/Customers/{everything}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5001
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/Customers/{everything}",
+    //  "UpstreamHttpMethod": [ "Get", "Post", "PUT" ]
+    //},
+    {
+      "DownstreamPathTemplate": "/api/Products",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Products",
+      "UpstreamHttpMethod": [ "GET" ]
+      ,
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Token",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Token",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003"
+
+
+  }
+}*/
